@@ -25,7 +25,7 @@ class Webot:
             ret = cmd(arg)
             print("gj")
             return True, ret
-        except:  # pylint: disable=W0702
+        except:
             return False, None
 
     def wait_page(self, current_url, timeout=15):
