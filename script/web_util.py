@@ -1,17 +1,9 @@
 #!/usr/bin/env python3
 
-import time
-import sys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
-from apscheduler.schedulers.blocking import BlockingScheduler
-from datetime import datetime
-
-import argparse
 
 
 class Webot:
@@ -19,10 +11,10 @@ class Webot:
         userdata_dir = 'UserData'
         options = Options()
         options.add_argument('--user-data-dir=' + userdata_dir)
-        #options.add_argument('--headless')
+        # options.add_argument('--headless')
         ua = 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:24.0) Gecko/20100101 Firefox/24.0'
         options.add_argument('--user-agent=' + ua)
-        #options.add_argument('--user-agent=hogehoge')
+        # options.add_argument('--user-agent=hogehoge')
         options.add_argument('--no-proxy-server')
         self.driver = webdriver.Chrome(options=options)
         self.top_url = url
@@ -32,14 +24,15 @@ class Webot:
         try:
             ret = cmd(arg)
             return True, ret
-        except:
+        except:  # pylint: disable=W0702
             return False, None
 
     def wait_page(self, current_url, timeout=15):
         try:
-            WebDriverWait(self.driver, timeout).until(EC.url_changes(current_url))
+            WebDriverWait(self.driver,
+                          timeout).until(EC.url_changes(current_url))
             return True
-        except:
+        except:  # pylint: disable=W0702
             print('timeout. stay in same page')
             return False
 
@@ -52,4 +45,5 @@ class Webot:
         self.driver.get(self.top_url)
 
     def move_to_element(self, element):
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);",
+                                   element)
