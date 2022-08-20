@@ -23,7 +23,7 @@ class Webot:
     def try_cmd(self, cmd, arg=''):
         try:
             ret = cmd(arg)
-            print("return")
+            print("returd")
             return True, ret
         except:  # pylint: disable=W0702
             return False, None
