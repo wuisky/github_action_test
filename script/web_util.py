@@ -23,7 +23,6 @@ class Webot:
     def try_cmd(self, cmd, arg=''):
         try:
             ret = cmd(arg)
-            print("gj")
             return True, ret
         except:
             return False, None
