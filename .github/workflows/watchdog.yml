@@ -16,3 +16,4 @@ jobs:
           level: error
           fail_on_error: true
           glob_pattern: "**/*.py"
+          pylint_rc: ./.pylintrc
