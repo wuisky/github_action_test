@@ -23,7 +23,6 @@ class Webot:
     def try_cmd(self, cmd, arg=''):
         try:
             ret = cmd(arg)
-            print("returd")
             return True, ret
         except:  # pylint: disable=W0702
             return False, None
@@ -34,7 +33,7 @@ class Webot:
                           timeout).until(EC.url_changes(current_url))
             return True
         except:  # pylint: disable=W0702
-            print('timeout. stay in same page')
+            print("timeout. stay in same page")
             return False
 
     def wait_ack(self, cmd, timeout):
