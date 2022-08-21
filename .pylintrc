@@ -199,6 +199,16 @@ indent-after-paren=4
 # Expected format of line ending, e.g. empty (any line ending), LF or CRLF.
 expected-line-ending-format=
 
+
+# The quote character for triple-quoted docstrings.
+docstring-quote=double
+
+# The quote character for string literals.
+string-quote=single
+
+# The quote character for triple-quoted strings (non-docstring).
+triple-quote=double
+
 [LOGGING]
 
 # Logging modules to check that the string format arguments are in logging
@@ -380,14 +390,3 @@ analyse-fallback-blocks=no
 # Exceptions that will emit a warning when being caught. Defaults to
 # "Exception"
 overgeneral-exceptions=Exception
-
-[STRING]
-
-# The quote character for triple-quoted docstrings.
-docstring-quote=double
-
-# The quote character for string literals.
-string-quote=single
-
-# The quote character for triple-quoted strings (non-docstring).
-triple-quote=double
