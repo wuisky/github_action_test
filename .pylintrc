@@ -200,6 +200,17 @@ indent-after-paren=4
 expected-line-ending-format=
 
 
+[STRING_QUOTES]
+
+# The quote character for triple-quoted docstrings.
+docstring-quote=double
+
+# The quote character for string literals.
+string-quote=single
+
+# The quote character for triple-quoted strings (non-docstring).
+triple-quote=double
+
 [LOGGING]
 
 # Logging modules to check that the string format arguments are in logging
@@ -243,7 +254,6 @@ spelling-private-dict-file=
 # Tells whether to store unknown words to indicated private dictionary in
 # --spelling-private-dict-file option instead of raising a message.
 spelling-store-unknown-words=no
-
 
 [TYPECHECK]
 
@@ -309,7 +319,6 @@ valid-metaclass-classmethod-first-arg=mcs
 # List of member names, which should be excluded from the protected access
 # warning.
 exclude-protected=_asdict,_fields,_replace,_source,_make
-
 
 [DESIGN]
 
@@ -383,9 +392,3 @@ analyse-fallback-blocks=no
 # Exceptions that will emit a warning when being caught. Defaults to
 # "Exception"
 overgeneral-exceptions=Exception
-
-[STRING]
-# Set the linting for string quotes
-string-quote=single
-triple-quote=double
-docstring-quote=double
