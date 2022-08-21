@@ -6,14 +6,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: dciborow/action-pylint@0.0.7
+      # - uses: dciborow/action-pylint@0.0.7
+      #   with:
+      #     github_token: ${{ secrets.github_token }}
+      #     # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
+      #     reporter: github-pr-review
+      #     # Change reporter level if you need.
+      #     # GitHub Status Check won't become failure with warning.
+      #     level: error
+      #     fail_on_error: true
+      #     glob_pattern: "**/*.py"
+      #     filter_mode: nofilter
+      - uses: ricardochaves/python-lint@v1.3.0
         with:
-          github_token: ${{ secrets.github_token }}
-          # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
-          reporter: github-pr-review
-          # Change reporter level if you need.
-          # GitHub Status Check won't become failure with warning.
-          level: error
-          fail_on_error: true
-          glob_pattern: "**/*.py"
-          filter_mode: nofilter
+          python-root-list: "python_alelo tests"
+          use-pylint: true
+          use-pycodestyle: false
+          use-flake8: false
+          use-black: false
+          use-mypy: false
+          use-isort: false
