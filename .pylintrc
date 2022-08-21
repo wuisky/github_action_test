@@ -200,6 +200,8 @@ indent-after-paren=4
 expected-line-ending-format=
 
 
+[STRING_QUOTES]
+
 # The quote character for triple-quoted docstrings.
 docstring-quote=double
 

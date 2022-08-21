@@ -16,4 +16,4 @@ jobs:
           level: error
           fail_on_error: true
           glob_pattern: "**/*.py"
-          # filter_mode: nofilter
+          filter_mode: nofilter
