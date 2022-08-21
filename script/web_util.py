@@ -32,8 +32,8 @@ class Webot:
             WebDriverWait(self.driver,
                           timeout).until(EC.url_changes(current_url))
             return True
-        except:
-            print("timeout. stay in same page")
+        except:  # pylint: disable=W0702
+            print('timeout. stay in same page')
             return False
 
     def wait_ack(self, cmd, timeout):
@@ -45,5 +45,5 @@ class Webot:
         self.driver.get(self.top_url)
 
     def move_to_element(self, element):
-        self.driver.execute_script("arguments[0].scrollIntoView(true);",
+        self.driver.execute_script('arguments[0].scrollIntoView(true);',
                                    element)
