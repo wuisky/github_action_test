@@ -33,7 +33,7 @@ class Webot:
                           timeout).until(EC.url_changes(current_url))
             return True
         except:
-            print('timeout. stay in same page')
+            print("timeout. stay in same page")
             return False
 
     def wait_ack(self, cmd, timeout):
