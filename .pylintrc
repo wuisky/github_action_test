@@ -384,7 +384,7 @@ analyse-fallback-blocks=no
 # "Exception"
 overgeneral-exceptions=Exception
 
-[STRING_QUOTES]
+[STRING]
 
 # The quote character for triple-quoted docstrings.
 docstring-quote=double
