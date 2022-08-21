@@ -32,7 +32,7 @@ class Webot:
             WebDriverWait(self.driver,
                           timeout).until(EC.url_changes(current_url))
             return True
-        except:
+        except:  # pylint: disable=W0702
             print("timeout. stay in same page")
             return False
 
