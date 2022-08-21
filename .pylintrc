@@ -384,7 +384,7 @@ analyse-fallback-blocks=no
 # "Exception"
 overgeneral-exceptions=Exception
 
-[STRING]
+[STRING_QUOTES]
 # Set the linting for string quotes
 string-quote=single
 triple-quote=double
