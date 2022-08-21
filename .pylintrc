@@ -199,6 +199,15 @@ indent-after-paren=4
 # Expected format of line ending, e.g. empty (any line ending), LF or CRLF.
 expected-line-ending-format=
 
+# The quote character for triple-quoted docstrings.
+docstring-quote=double
+
+# The quote character for string literals.
+string-quote=single
+
+# The quote character for triple-quoted strings (non-docstring).
+triple-quote=double
+
 
 [LOGGING]
 
@@ -309,17 +318,6 @@ valid-metaclass-classmethod-first-arg=mcs
 # List of member names, which should be excluded from the protected access
 # warning.
 exclude-protected=_asdict,_fields,_replace,_source,_make
-
-[STRING_QUOTES]
-
-# The quote character for triple-quoted docstrings.
-docstring-quote=double
-
-# The quote character for string literals.
-string-quote=single
-
-# The quote character for triple-quoted strings (non-docstring).
-triple-quote=double
 
 [DESIGN]
 

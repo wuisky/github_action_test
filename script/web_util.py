@@ -34,7 +34,6 @@ class Webot:
             return True
         except:
             print("timeout. stay in same page")
-            print("timeout. stay in same page")
             return False
 
     def wait_ack(self, cmd, timeout):
