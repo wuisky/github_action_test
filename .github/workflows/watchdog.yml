@@ -33,4 +33,4 @@ jobs:
         run: |
           python -m pip install --upgrade pip;
           pip install pylint;
-          pylint --rcfile=~/.pylintrc script/*.py
+          pylint --rcfile=./.pylintrc script/*.py
