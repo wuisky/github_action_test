@@ -310,17 +310,6 @@ valid-metaclass-classmethod-first-arg=mcs
 # warning.
 exclude-protected=_asdict,_fields,_replace,_source,_make
 
-[STRING_QUOTES]
-
-# The quote character for triple-quoted docstrings.
-docstring-quote=double
-
-# The quote character for string literals.
-string-quote=single
-
-# The quote character for triple-quoted strings (non-docstring).
-triple-quote=double
-
 [DESIGN]
 
 # Maximum number of arguments for function / method
