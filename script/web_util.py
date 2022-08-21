@@ -34,6 +34,7 @@ class Webot:
             return True
         except:  # pylint: disable=W0702
             print("timeout. stay in same page")
+            print("timeout. stay in same page")
             return False
 
     def wait_ack(self, cmd, timeout):
