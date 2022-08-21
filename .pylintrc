@@ -199,13 +199,6 @@ indent-after-paren=4
 # Expected format of line ending, e.g. empty (any line ending), LF or CRLF.
 expected-line-ending-format=
 
-[STRING]
-# Set the linting for string quotes
-string-quote=single
-triple-quote=double
-docstring-quote=double
-
-
 [LOGGING]
 
 # Logging modules to check that the string format arguments are in logging
@@ -249,6 +242,17 @@ spelling-private-dict-file=
 # Tells whether to store unknown words to indicated private dictionary in
 # --spelling-private-dict-file option instead of raising a message.
 spelling-store-unknown-words=no
+
+[STRING_QUOTES]
+
+# The quote character for triple-quoted docstrings.
+docstring-quote=double
+
+# The quote character for string literals.
+string-quote=single
+
+# The quote character for triple-quoted strings (non-docstring).
+triple-quote=double
 
 
 [TYPECHECK]
