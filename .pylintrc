@@ -199,6 +199,7 @@ indent-after-paren=4
 # Expected format of line ending, e.g. empty (any line ending), LF or CRLF.
 expected-line-ending-format=
 
+[STRING]
 # Set the linting for string quotes
 string-quote=single
 triple-quote=double
