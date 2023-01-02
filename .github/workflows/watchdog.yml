@@ -28,7 +28,7 @@ jobs:
           filter_mode: nofilter
 
   clang-format:
-    name: runner / pylint
+    name: runner / clang-format
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

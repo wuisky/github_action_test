@@ -1,21 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 template <class T>
-void chmax(T& a, T b)
-{
+void chmax(T& a, T b) {
   if (a < b) a = b;
 }
 template <class T>
-void chmin(T& a, T b)
-{
+void chmin(T& a, T b) {
   if (a > b) a = b;
 }
 
 // 無限大を表す値
 const int INF = 1 << 29;
 
-int main()
-{
+int main() {
   // 入力
   int N, K, W;
   vector<int> a(N);
@@ -45,10 +42,8 @@ int main()
   // dp[0][20] = 1;
 
   // ループ
-  for (int i = 0; i < N; ++i)
-  {
-    for (int j = 0; j <= W; ++j)
-    {
+  for (int i = 0; i < N; ++i) {
+    for (int j = 0; j <= W; ++j) {
       // 初期条件
       if (i == 0) dp[i][a[j]] = 1;
 
