@@ -12,7 +12,7 @@ jobs:
 
       - name: "run"
         run: |
-          echo tagname ${{ steps.tagName.outputs.tag }}
+          echo ${{ steps.tagName.outputs.tag }}
 
       - name: SSH Debug
         if: ${{ always() }}
