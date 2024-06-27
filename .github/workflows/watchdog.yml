@@ -7,10 +7,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: olegtarasov/get-tag@v2.1.3
+        id: tagName
+
       - name: "run"
         run: |
-          python -m pip install --upgrade pip;
-          pip install pylint-quotes
+          echo tagname ${{ steps.tagName.outputs.tag }}
 
       - name: SSH Debug
         if: ${{ always() }}
