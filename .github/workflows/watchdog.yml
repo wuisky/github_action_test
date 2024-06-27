@@ -1,5 +1,9 @@
 name: reviewdog
-on: [pull_request]
+on:
+  pull_request:
+  push:
+    tags:
+      - 'v*'
 jobs:
   check_tag:
     name: check_tag
@@ -7,12 +11,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: olegtarasov/get-tag@v2.1.3
-        id: tagName
+      - name: Get tag
+        id: tag
+        uses: devops-actions/action-get-tag@v1.0.3
+        with:
+          strip_v: false # Optional: Remove 'v' character from version
+          default: latest # Optional: Default version when tag not found
 
-      - name: "run"
-        run: |
-          echo ${{ steps.tagName.outputs.tag }}
+      - name: Use tag
+        run: echo ${{steps.tag.outputs.tag}}
+
+      # - uses: olegtarasov/get-tag@v2.1.3
+      #   id: tagName
+
+      # - name: "run"
+      #   run: |
+      #     echo ${{ steps.tagName.outputs.tag }}
 
       - name: SSH Debug
         if: ${{ always() }}
